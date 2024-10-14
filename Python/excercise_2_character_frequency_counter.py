@@ -15,4 +15,21 @@
 
 
 def get_frequency(input_string:str) -> dict:
-    pass
+    
+# input i guess???
+    if input_string is None or input_string ==  "":
+        return None 
+    
+# char frequency memory or somehting like this storage?
+    frequency_dict = {}
+
+# now i can itarate through everything maybe
+    for char in input_string:
+        if char == ' ':     # no space - i hope
+            continue
+        if char in frequency_dict:
+            frequency_dict[char] += 1 # update dictionary
+        else:
+            frequency_dict[char] = 1 # ne változzon ha nincs benne de adjon hozzá char t
+
+    return frequency_dict
